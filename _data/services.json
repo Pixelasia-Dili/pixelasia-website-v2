@@ -1,0 +1,30 @@
+{
+  "heading": "What We Do",
+  "items": [
+    {
+      "icon": "◉",
+      "title": "Film & Documentary",
+      "text": "Feature-length and short documentaries for international and local audiences."
+    },
+    {
+      "icon": "▣",
+      "title": "Commercials & Campaigns",
+      "text": "TV, cinema and online spots. Social behaviour change campaigns with measurable impact."
+    },
+    {
+      "icon": "★",
+      "title": "Events & Festivals",
+      "text": "Corporate events, concerts, conferences and the annual Dili International Film Festival (DIFF)."
+    },
+    {
+      "icon": "◎",
+      "title": "Radio & Audio",
+      "text": "Radio spots in Tetun and English. Own station: M3 Radio Dili."
+    },
+    {
+      "icon": "⬡",
+      "title": "Production Services",
+      "text": "Local production support for international crews and agencies filming in Timor-Leste."
+    }
+  ]
+}

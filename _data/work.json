@@ -1,0 +1,41 @@
+{
+  "heading": "Selected Work",
+  "projects": [
+    {
+      "title": "Running Far",
+      "category": "Documentary",
+      "meta": "Pixelasia Productions · 2019",
+      "image": "https://static.wixstatic.com/media/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg"
+    },
+    {
+      "title": "Feto Fantastiku",
+      "category": "Campaign",
+      "meta": "UN Women · 2022",
+      "image": "https://static.wixstatic.com/media/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg"
+    },
+    {
+      "title": "Super Trainer",
+      "category": "Commercial",
+      "meta": "UNICEF Timor-Leste · 2021",
+      "image": "https://static.wixstatic.com/media/bd5377_f60b9f6e387c4086a1d8101b03832a64~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/bd5377_f60b9f6e387c4086a1d8101b03832a64~mv2.jpg"
+    },
+    {
+      "title": "DIFF 2023",
+      "category": "Event",
+      "meta": "Dili International Film Festival",
+      "image": "https://static.wixstatic.com/media/4135ad_ffc23657b6454cac96097c8c4802f519~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/4135ad_ffc23657b6454cac96097c8c4802f519~mv2.jpg"
+    },
+    {
+      "title": "The Road to Acceptance",
+      "category": "Documentary",
+      "meta": "LGBTI Timor-Leste · 2020",
+      "image": "https://static.wixstatic.com/media/6f8c19_8b1e7fdcb2fb4c5da1ab40ef2b1982d3~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_8b1e7fdcb2fb4c5da1ab40ef2b1982d3~mv2.jpg"
+    },
+    {
+      "title": "Social Behaviour Change",
+      "category": "Campaign",
+      "meta": "UNDP · 2023",
+      "image": "https://static.wixstatic.com/media/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg"
+    }
+  ]
+}

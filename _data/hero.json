@@ -1,0 +1,35 @@
+{
+  "headline": "Film. Events. Impact.",
+  "headlineItalic": "Made in Timor-Leste.",
+  "subtitle": "The only full-service production house in Southeast Asia's youngest nation. Documentaries, campaigns, and events since 2011.",
+  "button1Text": "Watch Showreel",
+  "button1Link": "#work",
+  "button2Text": "Get in Touch",
+  "button2Link": "#contact",
+  "slides": [
+    {
+      "src": "https://static.wixstatic.com/media/6f8c19_68cc4aab968440ad85e3d28e7503abe3~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_68cc4aab968440ad85e3d28e7503abe3~mv2.jpg",
+      "alt": "Pixelasia production still 1"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg",
+      "alt": "Pixelasia production still 2"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg",
+      "alt": "Pixelasia production still 3"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg",
+      "alt": "Pixelasia production still 4"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg",
+      "alt": "Pixelasia production still 5"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg",
+      "alt": "Pixelasia production still 6"
+    }
+  ]
+}

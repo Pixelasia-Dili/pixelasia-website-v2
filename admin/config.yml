@@ -1,0 +1,426 @@
+# ============================================================
+# Pixelasia Productions Dili — Decap CMS Configuration
+# ============================================================
+# Backend: Netlify Identity + Git Gateway
+# Content is stored in _data/*.json — committed to GitHub.
+# After saving here Netlify runs "node build.js" automatically.
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: master
+
+# Media uploaded via CMS goes into assets/uploads/
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Changes go live immediately (no draft queue)
+publish_mode: simple
+
+# ============================================================
+# COLLECTIONS
+# ============================================================
+collections:
+
+  # ──────────────────────────────────────────────────────────
+  # 1. SITE SETTINGS
+  # All fields match the flat structure of _data/site.json
+  # ──────────────────────────────────────────────────────────
+  - name: "site"
+    label: "🌐 Site Settings"
+    files:
+      - name: "site"
+        label: "Global Settings"
+        file: "_data/site.json"
+        format: json
+        fields:
+          - label: "Page Title (browser tab & SEO)"
+            name: "title"
+            widget: "string"
+            hint: "Full title shown in browser tabs and Google results."
+          - label: "Meta Description (SEO)"
+            name: "description"
+            widget: "text"
+            hint: "Short summary for search engines — ideally under 160 characters."
+          - label: "Website URL"
+            name: "url"
+            widget: "string"
+            hint: "No trailing slash. E.g. https://www.pixelasia-dili.com"
+          - label: "Company Name (short)"
+            name: "company"
+            widget: "string"
+            hint: "Shown in nav, footer, and social sharing. E.g. Pixelasia Productions Dili"
+          - label: "Legal Name (for footer)"
+            name: "legal"
+            widget: "string"
+            hint: "E.g. Pixelasia Productions Dili, Unipessoal Lda"
+
+          - label: "Email"
+            name: "email"
+            widget: "string"
+          - label: "Phone (displayed on page)"
+            name: "phone"
+            widget: "string"
+            hint: "E.g. +670 7802 4019"
+          - label: "WhatsApp number (digits only, with country code)"
+            name: "whatsapp"
+            widget: "string"
+            hint: "Used in wa.me link. E.g. 67078024019 (no + or spaces)"
+
+          - label: "Facebook URL"
+            name: "facebookUrl"
+            widget: "string"
+          - label: "YouTube URL"
+            name: "youtubeUrl"
+            widget: "string"
+
+          - label: "Logo — purple version (for light nav)"
+            name: "logoPurple"
+            widget: "string"
+            hint: "Wix CDN URL or path to uploaded image."
+          - label: "Logo — white version (for dark footer)"
+            name: "logoWhite"
+            widget: "string"
+            hint: "Wix CDN URL or path to uploaded image."
+
+          - label: "OG Image URL (social sharing preview)"
+            name: "ogImage"
+            widget: "string"
+            hint: "Image shown when page is shared on social media. 1200×630px recommended."
+
+          - label: "Primary Brand Color (hex)"
+            name: "primaryColor"
+            widget: "color"
+            default: "#6B3FA0"
+            hint: "Main brand color — used for buttons, links, and highlighted elements."
+          - label: "Primary Hover Color (hex)"
+            name: "primaryColorHover"
+            widget: "color"
+            default: "#7d4fb5"
+            hint: "Slightly lighter variant shown on hover."
+          - label: "Primary Color — RGB values"
+            name: "primaryColorRgb"
+            widget: "string"
+            default: "107, 63, 160"
+            hint: "Same color as 'Primary Brand Color' but as 'r, g, b' (no brackets, no hash). Needed for transparent CSS effects. E.g. 107, 63, 160"
+
+          - label: "Founding Date (year)"
+            name: "foundingDate"
+            widget: "string"
+            default: "2011"
+            hint: "Used in structured data (SEO)."
+          - label: "Founder Name"
+            name: "founder"
+            widget: "string"
+
+  # ──────────────────────────────────────────────────────────
+  # 2. HERO / SHOWREEL
+  # Animated header with up to 6 background photos
+  # ──────────────────────────────────────────────────────────
+  - name: "hero"
+    label: "🎬 Hero / Showreel"
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "_data/hero.json"
+        format: json
+        fields:
+          - label: "Headline — line 1"
+            name: "headline"
+            widget: "string"
+            hint: "E.g. Stories that matter,"
+          - label: "Headline — line 2 (italic, purple)"
+            name: "headlineItalic"
+            widget: "string"
+            hint: "Shown in italic below line 1. E.g. 'since 2011.'"
+          - label: "Subtitle paragraph"
+            name: "subtitle"
+            widget: "text"
+            hint: "Short text shown below the headline."
+          - label: "Button 1 — Label"
+            name: "button1Text"
+            widget: "string"
+          - label: "Button 1 — Link"
+            name: "button1Link"
+            widget: "string"
+          - label: "Button 2 — Label"
+            name: "button2Text"
+            widget: "string"
+          - label: "Button 2 — Link"
+            name: "button2Link"
+            widget: "string"
+          - label: "Background Slides (1–6 images)"
+            name: "slides"
+            widget: "list"
+            summary: "Slide: {{fields.alt}}"
+            min: 1
+            max: 6
+            fields:
+              - label: "Image URL"
+                name: "src"
+                widget: "string"
+                hint: "Wix CDN URL or upload an image above and copy its path."
+              - label: "Alt text (accessibility description)"
+                name: "alt"
+                widget: "string"
+
+  # ──────────────────────────────────────────────────────────
+  # 3. SELECTED WORK
+  # 2-column project grid (up to 6 entries)
+  # ──────────────────────────────────────────────────────────
+  - name: "work"
+    label: "🎥 Selected Work"
+    files:
+      - name: "work"
+        label: "Work Grid"
+        file: "_data/work.json"
+        format: json
+        fields:
+          - label: "Section Heading"
+            name: "heading"
+            widget: "string"
+            default: "Selected Work"
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.category}})"
+            min: 1
+            max: 6
+            fields:
+              - label: "Project Title"
+                name: "title"
+                widget: "string"
+              - label: "Category tag (shown on card)"
+                name: "category"
+                widget: "string"
+                hint: "E.g. Documentary, Event Film, Animation"
+              - label: "Meta info (year, format, duration)"
+                name: "meta"
+                widget: "string"
+                hint: "E.g. 2023 · Documentary · 52 min"
+              - label: "Cover Image URL"
+                name: "image"
+                widget: "string"
+                hint: "16:9 ratio recommended. Wix CDN URL or path to uploaded image."
+
+  # ──────────────────────────────────────────────────────────
+  # 4. PROOF BAR (Statistics)
+  # 3 key figures on the dark bar between Work and Clients
+  # ──────────────────────────────────────────────────────────
+  - name: "proofbar"
+    label: "📊 Proof Bar (Statistics)"
+    files:
+      - name: "proofbar"
+        label: "Key Figures"
+        file: "_data/proofbar.json"
+        format: json
+        fields:
+          - label: "Stats (exactly 3)"
+            name: "stats"
+            widget: "list"
+            summary: "{{fields.number}} — {{fields.label}}"
+            min: 3
+            max: 3
+            fields:
+              - label: "Number / Value"
+                name: "number"
+                widget: "string"
+                hint: "E.g. 'Since 2011' or '100+'"
+              - label: "Label"
+                name: "label"
+                widget: "string"
+                hint: "E.g. 'Productions' or '6 Countries / In Our Crew'"
+
+  # ──────────────────────────────────────────────────────────
+  # 5. FEATURED CASE STUDY
+  # Large project showcase with 3 info cards
+  # ──────────────────────────────────────────────────────────
+  - name: "case"
+    label: "🏆 Featured Case Study"
+    files:
+      - name: "case"
+        label: "Case Study"
+        file: "_data/case.json"
+        format: json
+        fields:
+          - label: "Label tag (small caps above title)"
+            name: "label"
+            widget: "string"
+            default: "Featured Project"
+          - label: "Project Title"
+            name: "title"
+            widget: "string"
+          - label: "Cover / Thumbnail Image URL"
+            name: "image"
+            widget: "string"
+            hint: "16:10 ratio recommended. Shown as video thumbnail."
+          - label: "Challenge (white card, top)"
+            name: "challenge"
+            widget: "text"
+            hint: "What was the brief or problem?"
+          - label: "Production (white card, middle)"
+            name: "production"
+            widget: "text"
+            hint: "What was done to address it?"
+          - label: "Result (purple card, bottom)"
+            name: "result"
+            widget: "text"
+            hint: "What was achieved? Key outcomes."
+
+  # ──────────────────────────────────────────────────────────
+  # 6. SERVICES
+  # Cards arranged in a 5-column grid
+  # ──────────────────────────────────────────────────────────
+  - name: "services"
+    label: "🛠 Services"
+    files:
+      - name: "services"
+        label: "Services Section"
+        file: "_data/services.json"
+        format: json
+        fields:
+          - label: "Section Heading"
+            name: "heading"
+            widget: "string"
+            default: "What We Do"
+          - label: "Service Cards"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.icon}} {{fields.title}}"
+            min: 1
+            max: 8
+            fields:
+              - label: "Icon (single emoji)"
+                name: "icon"
+                widget: "string"
+                hint: "One emoji used as the card icon. E.g. 🎬 📸 🎵"
+              - label: "Service Name"
+                name: "title"
+                widget: "string"
+              - label: "Short Description"
+                name: "text"
+                widget: "text"
+                hint: "2–3 sentences max."
+
+  # ──────────────────────────────────────────────────────────
+  # 7. ABOUT
+  # 3 italic pull-quotes + body paragraph
+  # ──────────────────────────────────────────────────────────
+  - name: "about"
+    label: "💬 About"
+    files:
+      - name: "about"
+        label: "About Section"
+        file: "_data/about.json"
+        format: json
+        fields:
+          - label: "Pull Quotes (exactly 3)"
+            name: "quotes"
+            widget: "list"
+            label_singular: "Quote"
+            min: 3
+            max: 3
+            hint: "Short italic statements shown in the three cards. Max ~15 words each."
+          - label: "Body Paragraph"
+            name: "body"
+            widget: "text"
+            hint: "1–3 sentences about the company shown below the quotes."
+
+  # ──────────────────────────────────────────────────────────
+  # 8. TEAM
+  # Portrait cards for team members
+  # ──────────────────────────────────────────────────────────
+  - name: "team"
+    label: "👥 Team"
+    files:
+      - name: "team"
+        label: "Team Section"
+        file: "_data/team.json"
+        format: json
+        fields:
+          - label: "Section Heading"
+            name: "heading"
+            widget: "string"
+            default: "The Team"
+          - label: "Team Members"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            min: 1
+            max: 6
+            fields:
+              - label: "Full Name"
+                name: "name"
+                widget: "string"
+              - label: "Role / Job Title"
+                name: "role"
+                widget: "string"
+              - label: "Portrait Photo URL"
+                name: "photo"
+                widget: "string"
+                hint: "3:4 portrait ratio recommended. Upload via Media Library or paste Wix CDN URL."
+
+  # ──────────────────────────────────────────────────────────
+  # 9. DIFF — Dili International Film Festival
+  # Dark full-width section with background + side image
+  # ──────────────────────────────────────────────────────────
+  - name: "diff"
+    label: "🎞 DIFF Section"
+    files:
+      - name: "diff"
+        label: "Dili International Film Festival"
+        file: "_data/diff.json"
+        format: json
+        fields:
+          - label: "Label tag (small caps, above title)"
+            name: "label"
+            widget: "string"
+            default: "Annual Event"
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            hint: "Use \\n for a line break. E.g. 'Dili International\\nFilm Festival'"
+          - label: "Body Text"
+            name: "body"
+            widget: "text"
+          - label: "Button Label"
+            name: "buttonText"
+            widget: "string"
+            default: "Learn More →"
+          - label: "Button Link"
+            name: "buttonLink"
+            widget: "string"
+            default: "https://www.diff.tl"
+          - label: "Background Image URL"
+            name: "backgroundImage"
+            widget: "string"
+            hint: "Full-bleed dark background image (shown at 15% opacity). 16:9 landscape."
+          - label: "Side Image URL"
+            name: "sideImage"
+            widget: "string"
+            hint: "Right-column image. 16:10 landscape recommended."
+
+  # ──────────────────────────────────────────────────────────
+  # 10. CONTACT SECTION TEXT
+  # Heading and subtitle above the contact form
+  # ──────────────────────────────────────────────────────────
+  - name: "contact"
+    label: "✉️ Contact Section"
+    files:
+      - name: "contact"
+        label: "Contact Section Text"
+        file: "_data/contact.json"
+        format: json
+        fields:
+          - label: "Title — italic line (line 1)"
+            name: "titleItalic"
+            widget: "string"
+            hint: "E.g. Have a project in mind?"
+          - label: "Title — main line (line 2)"
+            name: "titleMain"
+            widget: "string"
+            hint: "E.g. Let's talk."
+          - label: "Subtitle (below heading)"
+            name: "subtitle"
+            widget: "string"
+            hint: "E.g. We'll get back to you within 24 hours."

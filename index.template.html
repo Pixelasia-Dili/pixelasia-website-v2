@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixelasia Productions Dili | Film, Events &amp; Production Services in Timor-Leste</title>
-  <meta name="description" content="Full-service video production in Dili, Timor-Leste. Documentaries, commercials, campaigns, events and the Dili International Film Festival. Since 2011.">
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}">
   <meta name="keywords" content="video production Dili, film production Timor-Leste, documentary Timor-Leste, Pixelasia, DIFF, Dili International Film Festival, production services Southeast Asia">
-  <link rel="canonical" href="https://www.pixelasia-dili.com/">
+  <link rel="canonical" href="{{SITE_URL}}/">
   <meta name="geo.region" content="TL-DI">
   <meta name="geo.placename" content="Dili, Timor-Leste">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Pixelasia Productions Dili | Film. Events. Impact.">
-  <meta property="og:description" content="Full-service video production in Dili, Timor-Leste. Documentaries, commercials, campaigns, events and the Dili International Film Festival. Since 2011.">
-  <meta property="og:image" content="https://www.pixelasia-dili.com/assets/images/og-image.jpg">
-  <meta property="og:url" content="https://www.pixelasia-dili.com/">
+  <meta property="og:title" content="{{SITE_COMPANY}} | Film. Events. Impact.">
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+  <meta property="og:image" content="{{SITE_OG_IMAGE}}">
+  <meta property="og:url" content="{{SITE_URL}}/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pixelasia Productions Dili | Film. Events. Impact.">
-  <meta name="twitter:description" content="Full-service video production in Dili, Timor-Leste. Documentaries, commercials, campaigns, events and the Dili International Film Festival. Since 2011.">
-  <meta name="twitter:image" content="https://www.pixelasia-dili.com/assets/images/og-image.jpg">
+  <meta name="twitter:title" content="{{SITE_COMPANY}} | Film. Events. Impact.">
+  <meta name="twitter:description" content="{{SITE_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{SITE_OG_IMAGE}}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +32,9 @@
   <!-- Theme color injected by build.js -->
   <style>
     :root {
-      --primary: #6B3FA0;
-      --primary-hover: #7d4fb5;
-      --primary-rgb: 107, 63, 160;
+      --primary: {{PRIMARY_COLOR}};
+      --primary-hover: {{PRIMARY_HOVER}};
+      --primary-rgb: {{PRIMARY_RGB}};
     }
   </style>
 
@@ -46,24 +46,24 @@
     "@graph": [
       {
         "@type": ["LocalBusiness", "Organization"],
-        "@id": "https://www.pixelasia-dili.com/#organization",
-        "name": "Pixelasia Productions Dili",
-        "legalName": "Pixelasia Productions Dili, Unipessoal Lda",
-        "url": "https://www.pixelasia-dili.com",
-        "description": "Full-service video production in Dili, Timor-Leste. Documentaries, commercials, campaigns, events and the Dili International Film Festival. Since 2011.",
+        "@id": "{{SITE_URL}}/#organization",
+        "name": "{{SITE_COMPANY}}",
+        "legalName": "{{SITE_LEGAL}}",
+        "url": "{{SITE_URL}}",
+        "description": "{{SITE_DESCRIPTION}}",
         "foundingDate": "2011",
         "founder": { "@type": "Person", "name": "Lena Lenzen", "jobTitle": "Founder & Director" },
         "address": { "@type": "PostalAddress", "streetAddress": "Rua St. Antonio 11", "addressLocality": "Dili", "addressCountry": "TL" },
-        "telephone": "+670 7802 4019",
-        "email": "info@pixelasia-dili.com",
-        "sameAs": ["https://www.facebook.com/pixelasia", "https://www.youtube.com/@pixelasia"]
+        "telephone": "{{SITE_PHONE}}",
+        "email": "{{SITE_EMAIL}}",
+        "sameAs": ["{{SITE_FACEBOOK}}", "{{SITE_YOUTUBE}}"]
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.pixelasia-dili.com/#website",
-        "url": "https://www.pixelasia-dili.com",
-        "name": "Pixelasia Productions Dili",
-        "publisher": { "@id": "https://www.pixelasia-dili.com/#organization" }
+        "@id": "{{SITE_URL}}/#website",
+        "url": "{{SITE_URL}}",
+        "name": "{{SITE_COMPANY}}",
+        "publisher": { "@id": "{{SITE_URL}}/#organization" }
       }
     ]
   }
@@ -76,8 +76,8 @@
   ============================================================ -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="Pixelasia Productions Dili">
-        <img src="https://static.wixstatic.com/media/6f8c19_837efa9dcf284117a199dfb55e485e0e~mv2_d_11811_4134_s_4_2.png/v1/fill/w_280,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Pixelasia%20New%20Logo%20Purple.png" alt="Pixelasia Productions Dili" height="36" style="height:36px;width:auto;display:block">
+      <a href="#" class="nav__logo" aria-label="{{SITE_COMPANY}}">
+        <img src="{{SITE_LOGO_PURPLE}}" alt="{{SITE_COMPANY}}" height="36" style="height:36px;width:auto;display:block">
       </a>
 
       <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
@@ -99,31 +99,26 @@
   ============================================================ -->
   <section class="hero" id="hero" aria-label="Hero">
     <div class="hero__slides" aria-hidden="true">
-            <img class="hero__slide hero__slide--1" src="https://static.wixstatic.com/media/6f8c19_68cc4aab968440ad85e3d28e7503abe3~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_68cc4aab968440ad85e3d28e7503abe3~mv2.jpg" alt="Pixelasia production still 1" fetchpriority="high">
-      <img class="hero__slide hero__slide--2" src="https://static.wixstatic.com/media/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg" alt="Pixelasia production still 2" loading="lazy">
-      <img class="hero__slide hero__slide--3" src="https://static.wixstatic.com/media/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg" alt="Pixelasia production still 3" loading="lazy">
-      <img class="hero__slide hero__slide--4" src="https://static.wixstatic.com/media/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg" alt="Pixelasia production still 4" loading="lazy">
-      <img class="hero__slide hero__slide--5" src="https://static.wixstatic.com/media/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg" alt="Pixelasia production still 5" loading="lazy">
-      <img class="hero__slide hero__slide--6" src="https://static.wixstatic.com/media/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg" alt="Pixelasia production still 6" loading="lazy">
+      {{HERO_SLIDES}}
     </div>
     <div class="hero__overlay" aria-hidden="true"></div>
 
     <div class="hero__content">
       <p class="hero__eyebrow">
         <span class="hero__line" aria-hidden="true"></span>
-        Pixelasia Productions Dili
+        {{SITE_COMPANY}}
       </p>
       <h1 class="hero__title">
-        Film. Events. Impact.<br>
-        <em>Made in Timor-Leste.</em>
+        {{HERO_HEADLINE}}<br>
+        <em>{{HERO_HEADLINE_ITALIC}}</em>
       </h1>
-      <p class="hero__sub">The only full-service production house in Southeast Asia's youngest nation. Documentaries, campaigns, and events since 2011.</p>
+      <p class="hero__sub">{{HERO_SUBTITLE}}</p>
       <div class="hero__actions">
-        <a href="#work" class="btn btn--hero-white">
+        <a href="{{HERO_BTN1_LINK}}" class="btn btn--hero-white">
           <span class="hero__play" aria-hidden="true"></span>
-          Watch Showreel
+          {{HERO_BTN1_TEXT}}
         </a>
-        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        <a href="{{HERO_BTN2_LINK}}" class="btn btn--ghost">{{HERO_BTN2_TEXT}}</a>
       </div>
     </div>
   </section>
@@ -134,88 +129,11 @@
   <section class="section section--light" id="work">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Selected Work</h2>
+        <h2 class="section-title">{{WORK_HEADING}}</h2>
         <span class="section-count">6 projects</span>
       </div>
       <div class="work-grid">
-        
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_c2197b9363244cdcbc26461908d0fe81~mv2.jpg" alt="Running Far" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Documentary</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">Running Far</h3>
-                <p class="work-card__meta">Pixelasia Productions · 2019</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/bd5377_54235eb23448489dbe8a31f2ed24769e~mv2.jpg" alt="Feto Fantastiku" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Campaign</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">Feto Fantastiku</h3>
-                <p class="work-card__meta">UN Women · 2022</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/bd5377_f60b9f6e387c4086a1d8101b03832a64~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/bd5377_f60b9f6e387c4086a1d8101b03832a64~mv2.jpg" alt="Super Trainer" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Commercial</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">Super Trainer</h3>
-                <p class="work-card__meta">UNICEF Timor-Leste · 2021</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/4135ad_ffc23657b6454cac96097c8c4802f519~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/4135ad_ffc23657b6454cac96097c8c4802f519~mv2.jpg" alt="DIFF 2023" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Event</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">DIFF 2023</h3>
-                <p class="work-card__meta">Dili International Film Festival</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/6f8c19_8b1e7fdcb2fb4c5da1ab40ef2b1982d3~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_8b1e7fdcb2fb4c5da1ab40ef2b1982d3~mv2.jpg" alt="The Road to Acceptance" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Documentary</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">The Road to Acceptance</h3>
-                <p class="work-card__meta">LGBTI Timor-Leste · 2020</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-card__img">
-            <img src="https://static.wixstatic.com/media/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80/6f8c19_79bf1509696f489da4d8481736c5cef7~mv2.jpg" alt="Social Behaviour Change" loading="lazy">
-            <div class="work-card__overlay">
-              <span class="work-card__badge">Campaign</span>
-              <div class="work-card__info">
-                <h3 class="work-card__title">Social Behaviour Change</h3>
-                <p class="work-card__meta">UNDP · 2023</p>
-              </div>
-            </div>
-          </div>
-        </article>
+        {{WORK_PROJECTS}}
       </div>
     </div>
   </section>
@@ -227,18 +145,18 @@
     <div class="container">
       <div class="proof-bar__grid">
         <div class="proof-bar__item">
-          <p class="proof-bar__number">Since 2011</p>
-          <p class="proof-bar__label">Producing in Timor-Leste</p>
+          <p class="proof-bar__number">{{PROOF1_NUMBER}}</p>
+          <p class="proof-bar__label">{{PROOF1_LABEL}}</p>
         </div>
         <div class="proof-bar__divider" aria-hidden="true"></div>
         <div class="proof-bar__item">
-          <p class="proof-bar__number">100+</p>
-          <p class="proof-bar__label">Productions</p>
+          <p class="proof-bar__number">{{PROOF2_NUMBER}}</p>
+          <p class="proof-bar__label">{{PROOF2_LABEL}}</p>
         </div>
         <div class="proof-bar__divider" aria-hidden="true"></div>
         <div class="proof-bar__item">
-          <p class="proof-bar__number">6 Countries</p>
-          <p class="proof-bar__label">In Our Crew</p>
+          <p class="proof-bar__number">{{PROOF3_NUMBER}}</p>
+          <p class="proof-bar__label">{{PROOF3_LABEL}}</p>
         </div>
       </div>
     </div>
@@ -337,12 +255,12 @@
   ============================================================ -->
   <section class="section section--light" id="case">
     <div class="container">
-      <p class="label-tag">Featured Case</p>
-      <h2 class="section-title section-title--wide">Mobile Cinema — Reaching Remote Communities Through Film</h2>
+      <p class="label-tag">{{CASE_LABEL}}</p>
+      <h2 class="section-title section-title--wide">{{CASE_TITLE}}</h2>
       <div class="case-grid">
         <div class="case-media">
           <div class="case-video">
-            <img src="https://static.wixstatic.com/media/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg/v1/fill/w_900,h_560,al_c,q_80/90d6ae_80f7fccc28964797985324c9e414fea0~mv2.jpg" alt="Mobile Cinema — Reaching Remote Communities Through Film" loading="lazy">
+            <img src="{{CASE_IMAGE}}" alt="{{CASE_TITLE}}" loading="lazy">
             <button class="play-btn" aria-label="Play video">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8 5L19 12L8 19V5Z" fill="var(--primary, #6B3FA0)"/>
@@ -353,15 +271,15 @@
         <div class="case-cards">
           <div class="case-card case-card--outline">
             <h3 class="case-card__title">Challenge</h3>
-            <p class="case-card__text">UNICEF needed to reach remote communities across Timor-Leste with critical health and education messages — in areas without TV or internet access.</p>
+            <p class="case-card__text">{{CASE_CHALLENGE}}</p>
           </div>
           <div class="case-card case-card--outline">
             <h3 class="case-card__title">Production</h3>
-            <p class="case-card__text">Created animated characters, produced short films, and toured 12 districts with mobile cinema over 8 weeks with a crew of 15.</p>
+            <p class="case-card__text">{{CASE_PRODUCTION}}</p>
           </div>
           <div class="case-card case-card--purple">
             <h3 class="case-card__title">Result</h3>
-            <p class="case-card__text">40,000+ direct viewers. Extended to radio and social media reaching 200,000+ people. Selected for international development film showcase.</p>
+            <p class="case-card__text">{{CASE_RESULT}}</p>
           </div>
         </div>
       </div>
@@ -373,38 +291,9 @@
   ============================================================ -->
   <section class="section section--alt" id="services">
     <div class="container">
-      <h2 class="section-title">What We Do</h2>
+      <h2 class="section-title">{{SERVICES_HEADING}}</h2>
       <div class="services-grid">
-        
-        <div class="service-card">
-          <div class="service-card__icon" aria-hidden="true">◉</div>
-          <h3 class="service-card__title">Film &amp; Documentary</h3>
-          <p class="service-card__text">Feature-length and short documentaries for international and local audiences.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon" aria-hidden="true">▣</div>
-          <h3 class="service-card__title">Commercials &amp; Campaigns</h3>
-          <p class="service-card__text">TV, cinema and online spots. Social behaviour change campaigns with measurable impact.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon" aria-hidden="true">★</div>
-          <h3 class="service-card__title">Events &amp; Festivals</h3>
-          <p class="service-card__text">Corporate events, concerts, conferences and the annual Dili International Film Festival (DIFF).</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon" aria-hidden="true">◎</div>
-          <h3 class="service-card__title">Radio &amp; Audio</h3>
-          <p class="service-card__text">Radio spots in Tetun and English. Own station: M3 Radio Dili.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon" aria-hidden="true">⬡</div>
-          <h3 class="service-card__title">Production Services</h3>
-          <p class="service-card__text">Local production support for international crews and agencies filming in Timor-Leste.</p>
-        </div>
+        {{SERVICES_ITEMS}}
       </div>
     </div>
   </section>
@@ -415,11 +304,11 @@
   <section class="section section--light" id="about">
     <div class="container">
       <div class="about-quotes">
-        <blockquote class="about-quote"><p>International experience. Local expertise.</p></blockquote>
-        <blockquote class="about-quote"><p>The only full-service production house in Timor-Leste.</p></blockquote>
-        <blockquote class="about-quote"><p>Deep roots in Timor-Leste. Since 2011.</p></blockquote>
+        <blockquote class="about-quote"><p>{{ABOUT_QUOTE1}}</p></blockquote>
+        <blockquote class="about-quote"><p>{{ABOUT_QUOTE2}}</p></blockquote>
+        <blockquote class="about-quote"><p>{{ABOUT_QUOTE3}}</p></blockquote>
       </div>
-      <p class="about-text">Pixelasia bridges international production standards with deep local knowledge. Founded by German director Lena Lenzen — with 25 years in the film industry — the company brings together a multicultural crew from six countries. From UN agencies to the Presidency of Timor-Leste, we deliver productions that combine creative excellence with cultural understanding.</p>
+      <p class="about-text">{{ABOUT_BODY}}</p>
     </div>
   </section>
 
@@ -428,38 +317,9 @@
   ============================================================ -->
   <section class="section section--alt" id="team">
     <div class="container">
-      <h2 class="section-title">The Team</h2>
+      <h2 class="section-title">{{TEAM_HEADING}}</h2>
       <div class="team-grid">
-        
-        <div class="team-card team-card--large">
-          <div class="team-card__img">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&amp;h=800&amp;fit=crop&amp;crop=face" alt="Lena Lenzen" loading="lazy">
-            <div class="team-card__overlay">
-              <p class="team-card__name">Lena Lenzen</p>
-              <p class="team-card__role">Founder &amp; Director</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__img">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&amp;h=800&amp;fit=crop&amp;crop=face" alt="Marco Silva" loading="lazy">
-            <div class="team-card__overlay">
-              <p class="team-card__name">Marco Silva</p>
-              <p class="team-card__role">Head of Production</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__img">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&amp;h=800&amp;fit=crop&amp;crop=face" alt="Ana Costa" loading="lazy">
-            <div class="team-card__overlay">
-              <p class="team-card__name">Ana Costa</p>
-              <p class="team-card__role">Lead Editor</p>
-            </div>
-          </div>
-        </div>
+        {{TEAM_MEMBERS}}
       </div>
     </div>
   </section>
@@ -469,19 +329,19 @@
   ============================================================ -->
   <section class="diff" id="diff">
     <div class="diff__bg" aria-hidden="true">
-      <img src="https://static.wixstatic.com/media/6f8c19_c585bad50c9d416aa44e10cf734d62a6~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_80/6f8c19_c585bad50c9d416aa44e10cf734d62a6~mv2.jpg" alt="" loading="lazy">
+      <img src="{{DIFF_BG_IMAGE}}" alt="" loading="lazy">
     </div>
     <div class="container">
       <div class="diff__grid">
         <div class="diff__text">
-          <p class="label-tag label-tag--light">Annual Event</p>
-          <h2 class="diff__title">Dili International<br>Film Festival</h2>
-          <p class="diff__sub">Since 2019, DIFF brings screenings, masterclasses, and cross-cultural exchange to Timor-Leste — connecting local filmmakers with international voices and building Southeast Asia's newest film community.</p>
-          <a href="https://www.diff.tl" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Learn More →</a>
+          <p class="label-tag label-tag--light">{{DIFF_LABEL}}</p>
+          <h2 class="diff__title">{{DIFF_TITLE}}</h2>
+          <p class="diff__sub">{{DIFF_BODY}}</p>
+          <a href="{{DIFF_BTN_LINK}}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">{{DIFF_BTN_TEXT}}</a>
         </div>
         <div class="diff__image">
           <div class="diff__img-wrap">
-            <img src="https://static.wixstatic.com/media/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg/v1/fill/w_800,h_500,al_c,q_80/6f8c19_49265699ad7a42848c910c182444e364~mv2.jpg" alt="Dili International Film Festival" loading="lazy">
+            <img src="{{DIFF_SIDE_IMAGE}}" alt="Dili International Film Festival" loading="lazy">
           </div>
         </div>
       </div>
@@ -496,9 +356,9 @@
       <div class="contact-grid">
         <div class="contact-form-wrap">
           <h2 class="contact-title">
-            <em>Have a project in mind?</em><br>Let's talk.
+            <em>{{CONTACT_TITLE_ITALIC}}</em><br>{{CONTACT_TITLE_MAIN}}
           </h2>
-          <p class="contact-subtitle">We'll get back to you within 24 hours.</p>
+          <p class="contact-subtitle">{{CONTACT_SUBTITLE}}</p>
 
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm" action="/thank-you">
             <input type="hidden" name="form-name" value="contact">
@@ -521,21 +381,21 @@
         <div class="contact-info">
           <div class="contact-info__block">
             <p class="contact-info__label">Email</p>
-            <a href="mailto:info@pixelasia-dili.com" class="contact-info__value">info@pixelasia-dili.com</a>
+            <a href="mailto:{{SITE_EMAIL}}" class="contact-info__value">{{SITE_EMAIL}}</a>
           </div>
           <div class="contact-info__block">
             <p class="contact-info__label">Phone / WhatsApp</p>
-            <a href="https://wa.me/+67078024019" target="_blank" rel="noopener noreferrer" class="contact-info__value">+670 7802 4019</a>
+            <a href="https://wa.me/{{SITE_WHATSAPP}}" target="_blank" rel="noopener noreferrer" class="contact-info__value">{{SITE_PHONE}}</a>
           </div>
           <div class="contact-info__block">
             <p class="contact-info__label">Address</p>
             <address class="contact-info__value">Rua St. Antonio 11<br>Dili, Timor-Leste</address>
           </div>
           <div class="contact-social">
-            <a href="https://www.facebook.com/pixelasia" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+            <a href="{{SITE_FACEBOOK}}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
-            <a href="https://www.youtube.com/@pixelasia" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+            <a href="{{SITE_YOUTUBE}}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/></svg>
             </a>
           </div>
@@ -550,11 +410,11 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <a href="#" class="footer__logo" aria-label="Pixelasia Productions Dili">
-          <img src="https://static.wixstatic.com/media/90d6ae_32fd21cd81304e23954f3f437c14e68a~mv2.png/v1/fill/w_280,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Pixelasia_Productions_Dili_Logo_3050x646_white_final.png" alt="Pixelasia Productions Dili" height="22" style="height:22px;width:auto;opacity:0.5">
+        <a href="#" class="footer__logo" aria-label="{{SITE_COMPANY}}">
+          <img src="{{SITE_LOGO_WHITE}}" alt="{{SITE_COMPANY}}" height="22" style="height:22px;width:auto;opacity:0.5">
         </a>
         <p class="footer__copy">
-          &copy; <span id="footerYear"></span> Pixelasia Productions Dili, Unipessoal Lda &middot; Dili, Timor-Leste
+          &copy; <span id="footerYear"></span> {{SITE_LEGAL}} &middot; Dili, Timor-Leste
         </p>
       </div>
     </div>

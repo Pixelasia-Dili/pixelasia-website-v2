@@ -1,0 +1,13 @@
+{
+  "name": "pixelasia-website-v2",
+  "version": "1.0.0",
+  "description": "Pixelasia Productions Dili — website v2",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && open index.html"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
